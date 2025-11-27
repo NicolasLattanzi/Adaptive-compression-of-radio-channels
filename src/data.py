@@ -1,4 +1,7 @@
 import torch
+from torch.utils.data import *
+
+from scipy.signal import ShortTimeFFT
 
 
 class RadioDataset(Dataset):
@@ -18,6 +21,10 @@ class RadioDataset(Dataset):
         return ...
 
 
-def train_test_split(dataset, train=0.6, test=0.4):
+def train_test_split(dataset, train=0.66, test=0.34):
     return torch.utils.data.random_split(dataset, [train, test])
 
+
+def apply_STFT():
+    ...
+    ShortTimeFFT(win=225, hop=128, fft_mode='onesided', mfft=225)
