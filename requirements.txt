@@ -2,3 +2,4 @@ torch
 torch_geometric
 numpy
 scipy
+h5py
