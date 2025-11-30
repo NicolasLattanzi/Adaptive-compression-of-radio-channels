@@ -8,5 +8,5 @@ classes = ['OOK','4ASK','8ASK','BPSK','QPSK','8PSK','16PSK','32PSK',
 
 # modulation is one-hot encoded in Y. argmax returns the index of the 1
 def get_modulation(encoded_mod):
-    return classes[ np.argmax(encoded_mod, axis=1) ]
+    return classes[ np.argmax(encoded_mod) ]
     
